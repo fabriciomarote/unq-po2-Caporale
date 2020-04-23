@@ -1,4 +1,4 @@
-package unq.edu.ar.src.p2.tp4.supermercado;
+package unq.edu.ar.p2.tp4.supermercado;
 
 public class Producto {
 	private String nombre;
