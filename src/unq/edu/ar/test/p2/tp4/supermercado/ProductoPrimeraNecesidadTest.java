@@ -1,9 +1,9 @@
-package Supermercado.test.supermercado;
+package unq.edu.ar.test.p2.tp4.supermercado;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import Supermercado.src.supermercado.ProductoPrimeraNecesidad;
+import unq.edu.ar.src.p2.tp4.supermercado.ProductoPrimeraNecesidad;
 
 import static org.junit.jupiter.api.Assertions.*;
 

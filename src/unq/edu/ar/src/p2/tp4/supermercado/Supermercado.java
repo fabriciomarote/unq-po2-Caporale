@@ -1,4 +1,4 @@
-package Supermercado.src.supermercado;
+package unq.edu.ar.src.p2.tp4.supermercado;
 
 import java.util.ArrayList;
 import java.util.List;
