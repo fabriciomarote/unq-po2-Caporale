@@ -11,7 +11,7 @@ public class IngresoTest {
 	
 	@BeforeEach
 	public void setUp() {
-		ingreso = new Ingreso(3,30000d,"Sueldo");
+		ingreso = new IngresoImponible(3,30000d,"Sueldo");
 	}
 	
 	@Test

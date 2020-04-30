@@ -14,15 +14,15 @@ import org.junit.jupiter.api.Test;
 public class TrabajadorTest {
 	
 	private Trabajador trabajador;
-	private Ingreso ingreso;
+	private IngresoImponible ingresoImponible;
 	private IngresoPorHoraExtra ingresoPorHoraExtra;
 	
 	@BeforeEach
 	public void setUp() {
 		trabajador = new Trabajador();
-		ingreso = new Ingreso(3,30000d,"Sueldo");
+		ingresoImponible = new IngresoImponible(3,30000d,"Sueldo");
 		ingresoPorHoraExtra = new IngresoPorHoraExtra(3,10000d,10);
-		trabajador.addIngreso(ingreso);
+		trabajador.addIngreso(ingresoImponible);
 		trabajador.addIngreso(ingresoPorHoraExtra);
 			
 	}

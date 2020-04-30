@@ -1,6 +1,6 @@
 package unq.edu.ar.po2.tp4.Trabajadores;
 
-public class Ingreso {
+public abstract class  Ingreso  {
 	
 	private Integer mes;
 	private Double monto;
@@ -24,9 +24,7 @@ public class Ingreso {
 		return concepto;
 	}
 	
-	
-	
-	
+	abstract public Double getMontoImponible();
 	
 
 }

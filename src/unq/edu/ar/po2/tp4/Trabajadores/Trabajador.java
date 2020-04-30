@@ -7,6 +7,7 @@ public class Trabajador {
 	
 	private List<Ingreso> ingresos;
 	
+	
 	public Trabajador() {
 		this.ingresos = new ArrayList<Ingreso>();
 		
@@ -15,22 +16,23 @@ public class Trabajador {
 	public void addIngreso(Ingreso ingreso) {
 		ingresos.add(ingreso);
 	}
+
+	
 	
 	public Double getTotalPercibido() {
 		return ingresos.stream()
-				.mapToDouble(i->i.getMonto())
+				.mapToDouble(Ingreso::getMonto)
 				.sum();
 	}
 	
 	public Double getMontoImponible() {
 		
 		return ingresos.stream()
-				.filter(i->i.getConcepto()!="Hora Extra")
-				.mapToDouble(i->i.getMonto())
+				.mapToDouble(Ingreso::getMontoImponible)
 				.sum();
 		
 	}
-	
+
 	public Double getImpuestosAPagar() {
 		return this.getMontoImponible()*0.02;
 		
