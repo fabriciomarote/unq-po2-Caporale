@@ -11,7 +11,7 @@ public class IngresoPorHoraExtra extends Ingreso{
     
     @Override
     public Double getMontoImponible(){
-    	return 0D;
+    	return 0d;
     }
 
 	public Integer getCantidadHorasExtra() {
