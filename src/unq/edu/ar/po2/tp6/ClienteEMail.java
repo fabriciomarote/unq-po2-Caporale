@@ -1,15 +1,36 @@
 package unq.edu.ar.po2.tp6;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClienteEMail {
 	
-	 ServidorPop servidor;
-	 String nombreUsuario;
-	 String passusuario;
-	 ArrayList<Correo> inbox;
-	private ArrayList<Correo> borrados;
+	 private ServidorPop servidor;
+	 private String nombreUsuario;
+	 private String passusuario;
+	 private List<Correo> inbox;
+	 private List<Correo> borrados;
 	
+	public ServidorPop getServidor() {
+		return servidor;
+	}
+
+	public String getNombreUsuario() {
+		return nombreUsuario;
+	}
+
+	public String getPassusuario() {
+		return passusuario;
+	}
+
+	public List<Correo> getInbox() {
+		return inbox;
+	}
+
+	public List<Correo> getBorrados() {
+		return borrados;
+	}
+
 	public ClienteEMail(ServidorPop servidor, String nombreUsuario, String pass){
 		this.servidor=servidor;
 		this.nombreUsuario=nombreUsuario;
@@ -20,33 +41,33 @@ public class ClienteEMail {
 	}
 	
 	public void conectar(){
-		this.servidor.conectar(this.nombreUsuario,this.passusuario);
+		this.getServidor().conectar(this.nombreUsuario,this.passusuario);
 	}
 	
 	public void borrarCorreo(Correo correo){
-		this.inbox.remove(correo);
-		this.borrados.remove(correo);
+		this.getInbox().remove(correo);
+		this.getBorrados().remove(correo);
 	}
 	
 	public int contarBorrados(){
-		return this.borrados.size();
+		return this.getBorrados().size();
 	}
 	
 	public int contarInbox(){
-		return this.inbox.size();
+		return this.getInbox().size();
 	}
 	
 	public void eliminarBorrado(Correo correo){
-		this.borrados.remove(correo);
+		this.getBorrados().remove(correo);
 	}
 	
 	public void recibirNuevos(){
-		this.servidor.recibirNuevos(this.nombreUsuario, this.passusuario);
+		this.getServidor().recibirNuevos(this.nombreUsuario, this.passusuario);
 	}
 	
 	public void enviarCorreo(String asunto, String destinatario, String cuerpo){
 		Correo correo = new Correo(asunto, destinatario, cuerpo);
-		this.servidor.enviar(correo);
+		this.getServidor().enviar(correo);
 	}
 
 }
