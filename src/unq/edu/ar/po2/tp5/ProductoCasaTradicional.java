@@ -13,4 +13,5 @@ public class ProductoCasaTradicional extends ProductoComercial{
 		return this.getPrecio();
 	}
 
+	
 }

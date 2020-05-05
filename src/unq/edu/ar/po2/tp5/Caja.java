@@ -18,10 +18,7 @@ public class Caja {
 	public void registrarProducto(ProductoComercial producto) {
 		this.montoAPagar += producto.getPrecioTotal();
 		producto.yaRegistrado(agencia);
-		//producto.decrementarStock();
-		//producto.informar(agencia);
 		
-	
 	}
 
 	
