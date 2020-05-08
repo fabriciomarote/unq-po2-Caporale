@@ -1,9 +1,11 @@
 package unq.edu.ar.po2.tp5;
 
 public class ProductoCasaTradicional extends ProductoComercial{
+	
+	private Double precio;
 
-	public ProductoCasaTradicional(Integer stock, Double precio) {
-		super(stock, precio);
+	public ProductoCasaTradicional(Double precio) {
+		super(precio);
 		
 	}
 

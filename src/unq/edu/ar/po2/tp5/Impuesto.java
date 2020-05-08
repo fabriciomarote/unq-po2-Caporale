@@ -7,6 +7,7 @@ public class Impuesto extends Factura{
 	public Impuesto(Double tasa) {
 		this.tasa = tasa;
 	}
+	
 
 	@Override
 	public Double getPrecioTotal() {

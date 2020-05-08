@@ -2,8 +2,8 @@ package unq.edu.ar.po2.tp5;
 
 public class ProductoCooperativa extends ProductoComercial{
 
-	public ProductoCooperativa(Integer stock, Double precio) {
-		super(stock, precio);
+	public ProductoCooperativa(Double precio) {
+		super(precio);
 		
 	}
 

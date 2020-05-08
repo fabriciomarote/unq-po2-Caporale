@@ -5,19 +5,32 @@ public class Caja {
 	
 	private Double montoAPagar;
 	private Agencia agencia;
+	private Stock stock;
 
-	public Caja(Agencia agencia) {
+	public Caja(Agencia agencia, Stock stock) {
 		this.montoAPagar = 0d;
-		
+		this.agencia = agencia;
+		this.stock = stock;
+			
 	}
 
 	public Double getMontoAPagar() {
 		return montoAPagar;
 	}
 	
-	public void registrarProducto(ProductoComercial producto) {
+	public Agencia getAgencia() {
+		return this.agencia;
+	}
+
+	public Stock getStock() {
+		return stock;
+	}
+
+
+	public void registrarProducto(Producto producto) {
 		this.montoAPagar += producto.getPrecioTotal();
-		producto.yaRegistrado(agencia);
+		stock.descontarStock(producto);
+		producto.registrarEn(agencia);
 		
 	}
 
