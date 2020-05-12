@@ -1,5 +1,6 @@
 package unq.edu.ar.po2.tp5;
 
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import unq.edu.ar.po2.tp4.Trabajadores.IngresoImponible;
 
 public class CajaTest {
+	
 	
 	private Agencia agencia;
 	
@@ -45,33 +47,36 @@ public class CajaTest {
 			
 	}
 	
-	@Test
-	public void stock() {
+	@Test 
+	public void verificarConstructor() {
+		assertEquals(agencia, caja1.getAgencia());
+		assertEquals(stock, caja1.getStock());
+		assertEquals(0, caja1.getMontoAPagar());	
+	}
+	
+	@Test 
+	public void verificarMontoAPagarLuegodeCompra() {
 		caja1.registrarProducto(leche);
-		caja1.registrarProducto(leche);
-		caja1.registrarProducto(leche);
+		caja1.registrarProducto(pan);
 		caja1.registrarProducto(azucar);
-		caja1.registrarProducto(pan);
-		caja1.registrarProducto(pan);
-		assertEquals(0,stock.stockDe(leche));
-		assertEquals(9,stock.stockDe(azucar));
-		assertEquals(0,stock.stockDe(pan));
-						
+		
+		assertEquals(135d, caja1.getMontoAPagar());	
 	}
-	@Test
-	public void stockVariasCajas() {
-		caja2 = new Caja(agencia,stock);
+	
+	@Test 
+	public void verificarMontoAPagarLuegodeFinalizadaLaCompra() {
 		caja1.registrarProducto(leche);
-		caja2.registrarProducto(leche);
-		caja1.registrarProducto(leche);
-		caja2.registrarProducto(azucar);
 		caja1.registrarProducto(pan);
-		caja2.registrarProducto(pan);
-		assertEquals(0,stock.stockDe(leche));
-		assertEquals(9,stock.stockDe(azucar));
-		assertEquals(0,stock.stockDe(pan));
-						
+		caja1.registrarProducto(azucar);
+		caja1.finalizarCompra();
+		
+		assertEquals(0d, caja1.getMontoAPagar());	
 	}
+	
+	
+	
+	
+	
 	
 
 }

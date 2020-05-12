@@ -33,6 +33,11 @@ public class Caja {
 		producto.registrarEn(agencia);
 		
 	}
+	
+	public void finalizarCompra() {
+		this.getMontoAPagar();
+		this.montoAPagar = 0d;
+	}
 
 	
 }
