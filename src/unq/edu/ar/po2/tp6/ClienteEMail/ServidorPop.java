@@ -1,9 +1,11 @@
-package unq.edu.ar.po2.tp6;
+package unq.edu.ar.po2.tp6.ClienteEMail;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ServidorPop implements IServidor {
+	
+	
 
 	public List<Correo> recibirNuevos(String user, String pass) {
 		List<Correo> retorno = new ArrayList<Correo>();

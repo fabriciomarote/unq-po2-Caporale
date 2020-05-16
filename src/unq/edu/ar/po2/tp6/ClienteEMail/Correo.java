@@ -1,4 +1,4 @@
-package unq.edu.ar.po2.tp6;
+package unq.edu.ar.po2.tp6.ClienteEMail;
 
 public class Correo {
 

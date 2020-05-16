@@ -1,4 +1,4 @@
-package unq.edu.ar.po2.tp6;
+package unq.edu.ar.po2.tp6.ClienteEMail;
 
 import java.util.ArrayList;
 import java.util.List;
