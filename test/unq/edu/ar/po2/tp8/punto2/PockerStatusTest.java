@@ -1,4 +1,4 @@
-package unq.edu.ar.po2.punto2;
+package unq.edu.ar.po2.tp8.punto2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -61,8 +61,6 @@ private PokerStatus pokerStatus;
 	public void cuandoUnJugadorRecibeCincoCartasDeDistintoPaloYDistintoNumeroNoTieneNada() {
 		assertEquals("NO TIENE NADA", pokerStatus.verificar("AD", "10D", "3T", "5P", "7C"));
 	}
-	
-	
-	
+
 
 }
