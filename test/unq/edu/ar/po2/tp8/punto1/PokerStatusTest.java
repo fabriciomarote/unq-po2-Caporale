@@ -41,7 +41,7 @@ public class PokerStatusTest {
 	
 	@Test
 	public void cuandoUnJugadorRecibeCuatroCartasDelMismoNumeroTodasAlFinalTienePoker() {
-		assertTrue(pokerStatus.verificar("8D","4P","4C","4T","4D")); // verify
+		assertTrue(pokerStatus.verificar("8D","AP","AC","AT","AD")); // verify
 	}
 	
 	@Test
