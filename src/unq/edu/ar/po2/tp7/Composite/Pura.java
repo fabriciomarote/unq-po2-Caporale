@@ -13,21 +13,13 @@ public class Pura implements PorcionProductivaDeTierra{
 		return this.getCultivo().getGananciaAnual();
 	}
 
-	public PorcionProductivaDeTierra getPorciones() {
-		
-		return null;
-	}
-
-	@Override
-	public Cultivo getCultivo() {
-		
-		return this.cultivo;
-	}
-
 	@Override
 	public void addPorcionroductivaDeTierra(PorcionProductivaDeTierra p) {
-		// TODO Auto-generated method stub
 		
+	}
+	
+	public Cultivo getCultivo() {
+		return this.cultivo;
 	}
 	
 	

@@ -18,19 +18,9 @@ public class Mixto implements PorcionProductivaDeTierra{
 	}
 
 	@Override
-	public PorcionProductivaDeTierra getPorciones() {
-		return null;
-	}
-	
-	@Override
 	public void addPorcionroductivaDeTierra(PorcionProductivaDeTierra p) {
 		this.porcionProductivaDeTierra.add(p);
 	}
 
-	@Override
-	public Cultivo getCultivo() {
-		return null;
-
-	}
 
 }
