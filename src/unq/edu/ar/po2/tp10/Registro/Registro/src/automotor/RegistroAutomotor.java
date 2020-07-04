@@ -4,7 +4,9 @@ import java.time.LocalDate;
 
 public class RegistroAutomotor {
 	
-	
+	public Boolean debeRealizarVtv(LocalDate fecha, Vehiculo vehiculo) {
+		return vehiculo.debeRealizarVtv(fecha);
+	}
 
 
 }

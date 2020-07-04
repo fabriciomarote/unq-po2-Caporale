@@ -26,21 +26,17 @@ public class Vehiculo {
 	}
 
 	public Boolean debeRealizarVtv(LocalDate fecha) {
-	
-		LocalDate fechaFabricacion = getFechaFabricacion();
-		Boolean esVehiculoPolicial = esVehiculoPolicial();
-		String ciudadRadicacion = ciudadRadicacion();
 		
-		return (!esVehiculoPolicial && tieneMasDeUnAñoDeAntiguedad(fecha, fechaFabricacion)
-				&& estaRadicadoEnBuenosAires(ciudadRadicacion));
+		return (!esVehiculoPolicial && tieneMasDeUnAñoDeAntiguedad(fecha)
+				&& estaRadicadoEnBuenosAires());
 	
 	}
 	
-	protected boolean estaRadicadoEnBuenosAires(String ciudadRadicacion) {
-		return ciudadRadicacion.equalsIgnoreCase("Buenos Aires");
+	protected boolean estaRadicadoEnBuenosAires() {
+		return this.ciudadRadicacion().equalsIgnoreCase("Buenos Aires");
 	}
 	
-	protected boolean tieneMasDeUnAñoDeAntiguedad(LocalDate fecha, LocalDate fechaFabricacion) {
-		return fecha.minusYears(1).isAfter(fechaFabricacion);
+	protected boolean tieneMasDeUnAñoDeAntiguedad(LocalDate fecha) {
+		return fecha.minusYears(1).isAfter(this.getFechaFabricacion());
 	}
 }

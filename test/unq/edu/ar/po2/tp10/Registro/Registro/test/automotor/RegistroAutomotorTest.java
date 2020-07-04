@@ -10,7 +10,7 @@ import org.junit.Test;
 import unq.edu.ar.po2.tp10.Registro.Registro.src.automotor.RegistroAutomotor;
 import unq.edu.ar.po2.tp10.Registro.Registro.src.automotor.Vehiculo;
 
-public class VehiculoTest {
+public class RegistroAutomotorTest {
 	
 	@Test
 	public void testVehiculosQueDebenRealizarVtv() {
@@ -21,9 +21,9 @@ public class VehiculoTest {
 		Vehiculo vechiculoCumpleVtv = new Vehiculo(false, LocalDate.of(2018, 1, 1), "Buenos Aires");
 		
 		
-		assertFalse("Vehiculos policiales no realizan vtv", vehiculoPolicial.debeRealizarVtv(LocalDate.of(2019, 10, 10)));
-		assertFalse("Vehiculos con antiguedad menor a un anio no realizan vtv", vehiculoReciente.debeRealizarVtv( LocalDate.of(2018, 11, 10)));
-		assertFalse("Vehiculos no radicados en Buenos Aires no realizan vtv", vehiculoLaPlata.debeRealizarVtv(LocalDate.of(2019, 10, 10)));
-		assertTrue(vechiculoCumpleVtv.debeRealizarVtv(LocalDate.of(2019, 10, 10)));
+		assertFalse("Vehiculos policiales no realizan vtv", registroAutomotor.debeRealizarVtv(LocalDate.of(2019, 10, 10), vehiculoPolicial));
+		assertFalse("Vehiculos con antiguedad menor a un anio no realizan vtv", registroAutomotor.debeRealizarVtv( LocalDate.of(2018, 11, 10),vehiculoReciente));
+		assertFalse("Vehiculos no radicados en Buenos Aires no realizan vtv", registroAutomotor.debeRealizarVtv(LocalDate.of(2019, 10, 10), vehiculoLaPlata));
+		assertTrue(registroAutomotor.debeRealizarVtv(LocalDate.of(2019, 10, 10),vechiculoCumpleVtv));
 	}
 }
