@@ -3,7 +3,7 @@ package unq.edu.ar.po2.tp7.Observer.punto3;
 public class ListoParaComenzar implements EstadoDeJuego{
 
 	@Override
-	public void agregarParticipanteAlJuego(Servidor servidor, IParticipante participante) throws Exception {
+	public void agregarParticipanteAlJuego(Servidor servidor, Participante participante) throws Exception {
 		if(servidor.getParticipantes().size() < 5) {
 			servidor.agregarParticipanteAlServidor(participante);
 			servidor.participanteConPuntajeInicial(participante);	

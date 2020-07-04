@@ -22,7 +22,7 @@ public class Servidor {
 		this.estado = new ListoParaComenzar();
 	}
 	
-	public void nuevoParticipante(IParticipante participante) throws Exception{
+	public void nuevoParticipante(Participante participante) throws Exception{
 		this.estado.agregarParticipanteAlJuego(this, participante);
 	}
 	
