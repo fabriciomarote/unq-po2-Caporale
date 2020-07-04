@@ -24,7 +24,14 @@ public class Vehiculo {
 	public String ciudadRadicacion() {
 		return ciudadRadicacion;
 	}
-
+    
+	/*
+	 * Bad Smell:
+	 * 
+	 * Large Method: mucho codigo condicional en el return, refactor: a cada condicion se la extrajo 
+	 *               a un metodo,para que sea mas legible, estos se puedan reutilizar y sea escalable.
+	 *               
+	 */
 	public Boolean debeRealizarVtv(LocalDate fecha) {
 		
 		return (!esVehiculoPolicial && tieneMasDeUnAñoDeAntiguedad(fecha)

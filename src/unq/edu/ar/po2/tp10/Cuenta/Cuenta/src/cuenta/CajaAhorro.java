@@ -6,16 +6,7 @@ public class CajaAhorro extends CuentaBancaria{
 		super(historialDeMovimientos, notificador, saldo);
 	}
 
-	@Override
-	public void extraer(Integer monto) {
-		if(elSaldoEnCuentaEsMayorAlMontoAExtraer(monto)) {
-			this.saldo = saldo - monto;
-			this.historialDeMovimientos.registrarMovimiento("Extracción", monto);
-			this.notificador.notificarNuevoSaldoACliente(this);
-		}
-	}
-
-	private boolean elSaldoEnCuentaEsMayorAlMontoAExtraer(Integer monto) {
+	public boolean esPosibleExtraerDeLaCuenta(Integer monto) {
 		return this.saldo >= monto;
 	}
 	
