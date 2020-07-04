@@ -97,6 +97,10 @@ public class Servidor {
 		this.estado = new Finalizado();
 		
 	}
+	
+	public void desuscribir(Participante participante) {
+		this.participantes.remove(participante);
+	}
 
 	
 	public void agregarParticipanteAlServidor(IParticipante participante) {
