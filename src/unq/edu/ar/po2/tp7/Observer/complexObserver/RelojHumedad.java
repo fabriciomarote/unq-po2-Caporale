@@ -1,4 +1,4 @@
-package complexObserver;
+package unq.edu.ar.po2.tp7.Observer.complexObserver;
 
 import java.util.Observable;
 import java.util.Observer;

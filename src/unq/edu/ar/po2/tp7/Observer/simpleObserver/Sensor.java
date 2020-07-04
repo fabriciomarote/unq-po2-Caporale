@@ -1,4 +1,4 @@
-package simpleObserver;
+package unq.edu.ar.po2.tp7.Observer.simpleObserver;
 import java.util.Observable;
 
 /**

@@ -1,4 +1,4 @@
-package complexWithListener;
+package unq.edu.ar.po2.tp7.Observer.complexWithListener;
 
 public interface SensorListener {
 

@@ -1,4 +1,4 @@
-package complexObserver;
+package unq.edu.ar.po2.tp7.Observer.complexObserver;
 
 /**
  * Importante: esta clase fue desarrollada a modo de ejemplo y disparador
