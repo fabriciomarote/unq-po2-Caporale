@@ -39,7 +39,7 @@ public class Servidor {
 	public void empezarJuego() {
 		if(this.getParticipantes().size()==5) {
 		this.estado = new EnJuego();
-		this.notificarParticipantes();
+		this.notificarParticipantesComienzoDeJuego();
 		}
 	}
 	
@@ -61,7 +61,7 @@ public class Servidor {
 	/*
 	 * Envia las preguntas del cuetionario a cada participante de la partida en curso.
 	 */
-	private void notificarParticipantes() {
+	private void notificarParticipantesComienzoDeJuego() {
 		List<String> preguntas = this.cuestionario.getPreguntasParaParticipante();
 		 this.participantes.stream().forEach(participante -> participante.recibirCuestionario(preguntas));
 		
@@ -73,22 +73,22 @@ public class Servidor {
 	private void notificarATodosLosParticipantesElGanador(Participante participante) {
 		String notificacion = "El usuario ganador de la partida es" + " " + participante.getNombre();
 		
-		this.participantes.stream().forEach(p->p.guardarNotificacion(notificacion));	
+		this.participantes.stream().forEach(p->p.recibirNotificacion(notificacion));	
 	}
 	
 	public void notificarRespuestaCorrectaA(Participante participante, Pregunta pregunta) {
 		participante.respuestaCorrecta(pregunta);
 	}
 	
-	public void notificarRespuestaCorrectaAParticipantes() {
-		String notificacion = "La respuesta fue respondida correctamente, por otro jugador";
-		for (IParticipante participante : this.participantes) {
-			participante.guardarNotificacion(notificacion);
-		}
+	public void notificarRespuestaCorrectaAParticipantes(Participante participante, Pregunta pregunta) {
+		String notificacion = "El participante" + " " + participante.getNombre()+ " " 
+	                           + "ha contestado correctamente la pregunta" + pregunta.getPregunta();
+		
+		this.getParticipantes().stream().forEach(p -> p.recibirNotificacion(notificacion));
 		
 	}
 
-	public void participanteConPuntajeInicial(IParticipante participante) {
+	public void participanteConPuntajeInicial(Participante participante) {
 		this.puntajes.put(participante, 0);
 		
 	}

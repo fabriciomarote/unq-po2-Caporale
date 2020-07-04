@@ -8,7 +8,6 @@ public class Participante implements IParticipante {
 			
 		private List<String> preguntasRecibidas;
 		private List<String> notificaciones;
-		private Integer cantPreguntas;
 		private Servidor servidor;
 		private String nombre;
 		
@@ -16,7 +15,6 @@ public class Participante implements IParticipante {
 			this.nombre = nombre;
 			this.preguntasRecibidas = new ArrayList<String>();
 			this.notificaciones = new ArrayList<String>();
-			this.cantPreguntas = 0;
 		}
 
 		@Override
@@ -24,11 +22,10 @@ public class Participante implements IParticipante {
 			this.preguntasRecibidas = preguntas;
 			
 		}
-		
+	
 		@Override
-		public void guardarNotificacion(String notificacion) {
+		public void recibirNotificacion(String notificacion) {
 			this.notificaciones.add(notificacion);
-			
 		}
 		
 		
@@ -54,14 +51,13 @@ public class Participante implements IParticipante {
 			return this.servidor != null;
 		}
 
-		
-
-		public void respuestaIncorrecta() {
-			this.guardarNotificacion("Respuesta fue incorrecta");
-			
+		public void respuestaCorrecta(Pregunta pregunta) {
+			this.preguntasRecibidas.remove(pregunta.getPregunta());	
 		}
 
-		
+		public void respuestaIncorrecta() {
+			this.recibirNotificacion("La Respuesta es incorrecta");	
+		}
 
 		public List<String> getNotificaciones() {
 			return notificaciones;
@@ -74,11 +70,5 @@ public class Participante implements IParticipante {
 		public String getNombre() {
 			return this.nombre;
 		}
-
-		public void respuestaCorrecta(Pregunta pregunta) {
-			this.preguntasRecibidas.remove(pregunta.getPregunta());
-			
-		}
-
 
 }

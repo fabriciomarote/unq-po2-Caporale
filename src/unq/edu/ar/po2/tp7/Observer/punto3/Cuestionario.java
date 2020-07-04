@@ -8,13 +8,9 @@ public class Cuestionario {
 	
 	private List<Pregunta> preguntas; 
 	
-	public Cuestionario(Pregunta pregunta1, Pregunta pregunta2, Pregunta pregunta3, Pregunta pregunta4, Pregunta pregunta5) {
-		this.preguntas = new ArrayList<Pregunta>();
-		this.preguntas.add(pregunta1);
-		this.preguntas.add(pregunta2);
-		this.preguntas.add(pregunta3);
-		this.preguntas.add(pregunta4);
-		this.preguntas.add(pregunta5);	
+	public Cuestionario(List<Pregunta> preguntas) {
+		
+		this.preguntas = preguntas;
 	}
 
 	public List<Pregunta> getPreguntas() {
