@@ -1,9 +1,13 @@
-package cuenta;
+package unq.edu.ar.po2.tp10.Cuenta.Cuenta.test.cuenta;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.mockito.Mockito;
+
+import unq.edu.ar.po2.tp10.Cuenta.Cuenta.src.cuenta.CajaAhorro;
+import unq.edu.ar.po2.tp10.Cuenta.Cuenta.src.cuenta.HistorialMovimientos;
+import unq.edu.ar.po2.tp10.Cuenta.Cuenta.src.cuenta.Notificador;
 
 public class CajaAhorroTest {
 	
