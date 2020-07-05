@@ -1,4 +1,4 @@
-package unq.edu.ar.po2.tp9.state.encriptador;
+package unq.edu.ar.po2.tp9.Strategy.encriptador;
 
 import static org.junit.jupiter.api.Assertions.*;
 

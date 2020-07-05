@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp10.stateYStrategy.mp3;
+package unq.edu.ar.po2.tp9.state.mp3;
 
 public class SeleccionDeTemas extends EstadoReproductor {
 
