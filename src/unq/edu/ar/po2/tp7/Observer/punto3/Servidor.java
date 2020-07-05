@@ -77,7 +77,7 @@ public class Servidor {
 	}
 	
 	public void notificarRespuestaCorrectaA(Participante participante, Pregunta pregunta) {
-		participante.respuestaCorrecta(pregunta);
+		participante.recibirRespuestaCorrecta(pregunta);
 	}
 	
 	public void notificarRespuestaCorrectaAParticipantes(Participante participante, Pregunta pregunta) {

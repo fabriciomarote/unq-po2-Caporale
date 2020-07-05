@@ -9,8 +9,10 @@ public interface IParticipante {
 	
 	void solicitarIngresoALaPartida(Servidor servidor)throws Exception;
 	
-	void enviarRespuesta(String Pregunta, Respuesta respuesta) throws Exception;
-
 	void recibirNotificacion(String notificacion);
+
+    void recibirRespuestaCorrecta(Pregunta pregunta);
+	
+	void recibirRespuestaIncorrecta();
 	
 }

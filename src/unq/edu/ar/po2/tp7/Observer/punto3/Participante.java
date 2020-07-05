@@ -22,12 +22,21 @@ public class Participante implements IParticipante {
 			this.preguntasRecibidas = preguntas;
 			
 		}
-	
+        
+		@Override
+		public void recibirRespuestaCorrecta(Pregunta pregunta) {
+			this.preguntasRecibidas.remove(pregunta.getPregunta());	
+		}
+
+		@Override
+		public void recibirRespuestaIncorrecta() {
+			this.recibirNotificacion("La Respuesta es incorrecta");	
+		}
+		
 		@Override
 		public void recibirNotificacion(String notificacion) {
 			this.notificaciones.add(notificacion);
 		}
-		
 		
 		/*
 		 * suscripcion al juego
@@ -38,7 +47,7 @@ public class Participante implements IParticipante {
 			this.servidor.nuevoParticipante(this);
 		}
 		
-		@Override
+		
 		public void enviarRespuesta(String pregunta, Respuesta respuesta) throws Exception  {
 			if(this.esParticipanteEnJuego()) {
 				this.servidor.verificarRespuesta(pregunta, respuesta, this);
@@ -49,14 +58,6 @@ public class Participante implements IParticipante {
 		
 		public boolean esParticipanteEnJuego() {
 			return this.servidor != null;
-		}
-
-		public void respuestaCorrecta(Pregunta pregunta) {
-			this.preguntasRecibidas.remove(pregunta.getPregunta());	
-		}
-
-		public void respuestaIncorrecta() {
-			this.recibirNotificacion("La Respuesta es incorrecta");	
 		}
 
 		public List<String> getNotificaciones() {
