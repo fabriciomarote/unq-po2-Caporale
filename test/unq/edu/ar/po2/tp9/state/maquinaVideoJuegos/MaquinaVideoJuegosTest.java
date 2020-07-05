@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp10.maquinaVideoJuegos;
+package unq.edu.ar.po2.tp9.state.maquinaVideoJuegos;
 
 import static org.junit.jupiter.api.Assertions.*;
 

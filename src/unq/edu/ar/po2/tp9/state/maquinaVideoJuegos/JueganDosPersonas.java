@@ -1,4 +1,6 @@
-package ar.edu.unq.po2.tp10.maquinaVideoJuegos;
+package unq.edu.ar.po2.tp9.state.maquinaVideoJuegos;
+
+
 public class JueganDosPersonas implements EstadoDeJuego {
 
 	@Override
