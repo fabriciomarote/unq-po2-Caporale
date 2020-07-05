@@ -40,7 +40,7 @@ public class Compuesto implements IShapeShifte {
 	@Override
 	public IShapeShifte flat() {
 		if(this.deepest()>=1) {
-			return 
+			return null;
 		}
 		// Si el IShapeShifter posee una prfundidad maxima >= 1, entonces retorna un IShapeShifter de profundidad maxima 1 con todos los IShapeShifter de profundidad 0 contenidos. En cualquier otro caso, retorna el mismo IShapeShifter.
 		//Siguiendo los siguientes ejemplos:
