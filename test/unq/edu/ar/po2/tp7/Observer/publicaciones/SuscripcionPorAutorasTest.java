@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp9.publicaciones;
+package unq.edu.ar.po2.tp7.Observer.publicaciones;
 
 import static org.junit.jupiter.api.Assertions.*;
 

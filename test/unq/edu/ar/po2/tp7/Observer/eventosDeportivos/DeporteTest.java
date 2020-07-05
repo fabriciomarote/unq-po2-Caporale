@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp9.eventosDeportivos;
+package unq.edu.ar.po2.tp7.Observer.eventosDeportivos;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
