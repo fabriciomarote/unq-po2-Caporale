@@ -123,7 +123,7 @@ public class ServidorTest {
 		
 		
 		servidor.verificarRespuesta(pregunta1.getPregunta(), respuesta2, participante1);
-		verify(participante1, times(1)).respuestaIncorrecta();
+		verify(participante1, times(1)).recibirRespuestaIncorrecta();
 		
 	}
 	

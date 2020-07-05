@@ -145,7 +145,7 @@ public class ParticipanteTest {
 		
 		assertEquals(preguntasParaParticipante, participante1.getPreguntasRecibidas());
 		
-		participante1.respuestaCorrecta(pregunta1);
+		participante1.recibirRespuestaCorrecta(pregunta1);
 		
 		assertEquals(preguntasParaParticipanteSinPregunta1, participante1.getPreguntasRecibidas());
 		

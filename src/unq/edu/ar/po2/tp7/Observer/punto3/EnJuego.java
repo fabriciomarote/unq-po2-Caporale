@@ -15,7 +15,7 @@ public class EnJuego implements EstadoDeJuego {
 			servidor.notificarRespuestaCorrectaA(participante, pregunta);
 			servidor.notificarRespuestaCorrectaAParticipantes(participante, pregunta);
 		}else {
-			participante.respuestaIncorrecta();
+			participante.recibirRespuestaIncorrecta();
 			
 		}
 		
