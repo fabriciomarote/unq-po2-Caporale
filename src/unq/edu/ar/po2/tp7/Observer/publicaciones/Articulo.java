@@ -13,7 +13,7 @@ public class Articulo {
 	private List<String> palabrasClave;
 	
 	public Articulo(String titulo, List<String> autoras, List<String> filiacionDeAutoras, String tipoDeArticulo,
-			String lugarDePublicacion, List<String> palabrasClave) {
+		String lugarDePublicacion, List<String> palabrasClave) {
 		this.titulo = titulo;
 		this.autoras = autoras;
 		this.filiacionDeAutoras = filiacionDeAutoras;
