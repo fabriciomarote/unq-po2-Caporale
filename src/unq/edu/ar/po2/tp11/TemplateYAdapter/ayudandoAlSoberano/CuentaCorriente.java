@@ -1,4 +1,4 @@
-package unq.edu.ar.po2.tp11.ayudandoAlSoberano;
+package unq.edu.ar.po2.tp11.TemplateYAdapter.ayudandoAlSoberano;
 
 public class CuentaCorriente extends CuentaBancaria {
 	

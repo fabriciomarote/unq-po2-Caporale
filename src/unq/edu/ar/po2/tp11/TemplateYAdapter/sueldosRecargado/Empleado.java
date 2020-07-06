@@ -1,4 +1,4 @@
-package unq.edu.ar.po2.tp11.sueldosRecargado;
+package unq.edu.ar.po2.tp11.TemplateYAdapter.sueldosRecargado;
 
 public class Empleado {
 
@@ -36,15 +36,9 @@ public class Empleado {
 
 	protected  abstract void sumarOtrosConceptos(Double sueldo);
 
+	//Hook
 	private void aplicarDescuentos(Double sueldo) {
 		sueldo= sueldo * 0.87;
 	}
 	
-	
-//	
-//	/**
-//	 * Es metodo hook
-//	 * 
-//	 */
-//	public void  plusPorConyuge() { };
 }

@@ -1,4 +1,4 @@
-package unq.edu.ar.po2.tp11.sueldosRecargado;
+package unq.edu.ar.po2.tp11.TemplateYAdapter.sueldosRecargado;
 
 public class Pasante extends Empleado{
 	
