@@ -22,5 +22,17 @@ public class Mixto implements PorcionProductivaDeTierra{
 		this.porcionProductivaDeTierra.add(p);
 	}
 
+	@Override
+	public void eliminar(PorcionProductivaDeTierra p) {
+		this.porcionProductivaDeTierra.remove(p);
+		
+	}
+
+	@Override
+	public List<PorcionProductivaDeTierra> obtenerPorcionProductivaDeTierra() {
+		return this.porcionProductivaDeTierra.stream().flatMap(p -> p.obtenerPorcionProductivaDeTierra().stream()).collect(Collectors.toList());
+		
+	}
+
 
 }
