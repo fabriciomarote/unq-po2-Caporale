@@ -1,6 +1,6 @@
 package unq.edu.ar.po2.tp11.ayudandoAlSoberano;
 
-public class CajaDeAhorro {
+public class CajaDeAhorro extends CuentaBancaria {
 	
 	private int limite;
 
