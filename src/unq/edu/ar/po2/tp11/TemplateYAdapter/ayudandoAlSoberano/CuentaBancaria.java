@@ -9,7 +9,7 @@ import java.util.List;
  *
  */
 
-public class CuentaBancaria {
+public abstract class CuentaBancaria {
 	
 	private String titular;
 	private int saldo;
@@ -37,6 +37,9 @@ public class CuentaBancaria {
 		this.movimientos.add(movimiento);
 	}
 
+	/*
+	 * templete metodo
+	 */
 	public  void extraer(int monto) {
 		if (esExtraccionPermitida(monto)) {
 			this.setSaldo(this.getSaldo() - monto);

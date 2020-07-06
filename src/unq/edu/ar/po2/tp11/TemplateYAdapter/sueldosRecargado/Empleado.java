@@ -21,6 +21,8 @@ public class Empleado {
 		return this.horasTrabajadas;
 	}
 	
+	// templete method
+	
 	public Double sueldo() {
 		Double sueldo = 0D;
 		this.sumarSueldoPorHora(sueldo);
@@ -30,15 +32,18 @@ public class Empleado {
 		return sueldo;
 	}
 	
-	protected abstract void sumarSueldoPorHora(Double sueldo);
+	protected abstract void sumarSueldoPorHora(Double sueldo); //abstracta
 
-	protected abstract void sumarSueldoBasico(Double sueldo);
+	protected abstract void sumarSueldoBasico(Double sueldo); //abstracta
 
-	protected  abstract void sumarOtrosConceptos(Double sueldo);
+	protected  abstract void sumarOtrosConceptos(Double sueldo); //abstracta
 
 	//Hook
 	private void aplicarDescuentos(Double sueldo) {
 		sueldo= sueldo * 0.87;
 	}
+	
+	// clases concretas :
+    //pasante, Planta, Temporario
 	
 }
