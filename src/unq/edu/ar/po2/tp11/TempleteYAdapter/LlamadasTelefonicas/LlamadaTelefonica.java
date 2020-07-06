@@ -1,4 +1,4 @@
-package unq.edu.ar.po2.TempleteYAdapter.LlamadasTelefonicas;
+package unq.edu.ar.po2.tp11.TempleteYAdapter.LlamadasTelefonicas;
 
 public abstract class LlamadaTelefonica {
 	

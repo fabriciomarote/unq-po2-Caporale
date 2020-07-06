@@ -1,5 +1,8 @@
 package unq.edu.ar.po2.tp11.TempleteYAdapter.Wikipedia;
 
+import java.util.Map;
+import java.util.Set;
+
 public class PropiedadEnComun {
 	
     public PropiedadEnComun() {}

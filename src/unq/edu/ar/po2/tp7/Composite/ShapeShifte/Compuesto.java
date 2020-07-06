@@ -37,12 +37,17 @@ public class Compuesto implements IShapeShifte {
 		return max + 1;
 	}
 
-	@Override
-	public IShapeShifte flat() {
-		IShapeShifte shapeShifter = (IShapeShifte) this.getShapeShifters().stream().map(ss -> ss.flat()).collect(Collectors.toList());
-		
-		return this;
-	}
+	 @Override
+		public IShapeShifte flat() {
+			while (this.deepest() > 1) {
+				List<IShapeShifte> list = new ArrayList<IShapeShifte>();
+				for (Integer value : this.values()) {
+					list.add(new Comun(value));
+					shapeShifters = list;
+				}
+			}
+			return this;
+		}
 
 	@Override
 	public List<Integer> values() {
