@@ -5,12 +5,17 @@ import java.util.List;
 
 public class Comun implements IShapeShifte{
 	
-	private int value;
+	private Integer value;
+	
+	public Comun(Integer value) {
+		super();
+		this.value = value;
+	}
 
 	@Override
 	public IShapeShifte compose(IShapeShifte ss) {
-		IShapeShifte shipeShifte = new Compuesto(this,ss);
-		return null;
+		Compuesto ret =  new Compuesto(this, ss);
+		return ret;
 	}
 
 	@Override

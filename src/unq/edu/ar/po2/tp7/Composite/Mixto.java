@@ -30,7 +30,7 @@ public class Mixto implements PorcionProductivaDeTierra{
 
 	@Override
 	public List<PorcionProductivaDeTierra> obtenerPorcionProductivaDeTierra() {
-		return this.porcionProductivaDeTierra.stream().flatMap(p -> p.obtenerPorcionProductivaDeTierra().stream()).collect(Collectors.toList());
+		return (List<PorcionProductivaDeTierra>) this.porcionProductivaDeTierra.stream().flatMap(p -> p.obtenerPorcionProductivaDeTierra().stream()).collect(Collectors.toList());
 		
 	}
 
