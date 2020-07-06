@@ -70,7 +70,7 @@ public class Servidor {
 	/*
 	 * @param se recibe por parametro el participante que ha ganado la partida.
 	 */
-	private void notificarATodosLosParticipantesElGanador(Participante participante) {
+	public void notificarATodosLosParticipantesElGanador(Participante participante) {
 		String notificacion = "El usuario ganador de la partida es" + " " + participante.getNombre();
 		
 		this.participantes.stream().forEach(p->p.recibirNotificacion(notificacion));	
@@ -122,6 +122,11 @@ public class Servidor {
 
 	public EstadoDeJuego getEstado() {
 		return estado;
+	}
+
+	public void setEstado(EstadoDeJuego estado) {
+		this.estado = estado;
+		
 	}
 	
 

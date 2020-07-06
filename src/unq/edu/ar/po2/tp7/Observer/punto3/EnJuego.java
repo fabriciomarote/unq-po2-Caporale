@@ -14,8 +14,13 @@ public class EnJuego implements EstadoDeJuego {
 			servidor.sumarPuntajeA(participante);
 			servidor.notificarRespuestaCorrectaA(participante, pregunta);
 			servidor.notificarRespuestaCorrectaAParticipantes(participante, pregunta);
-		}else {
-			participante.recibirRespuestaIncorrecta();
+			
+			if(servidor.getPuntajes().get(participante) == 5) {
+				servidor.setEstado(new Finalizado());
+				servidor.notificarATodosLosParticipantesElGanador(participante);
+			}
+		 }else {
+			    participante.recibirRespuestaIncorrecta();
 			
 		}
 		
